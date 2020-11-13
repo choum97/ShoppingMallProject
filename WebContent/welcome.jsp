@@ -27,6 +27,7 @@
 				<%=tagline%>
 			</h3>
 			<%
+				response.setIntHeader("Refresh",5);
 				Date day = new java.util.Date();
 				String am_pm;
 				int hour = day.getHours();
@@ -43,7 +44,7 @@
 			%>
 		</div>
 		<hr>
-		<%@ include file="footer.jsp" %>
+		<jsp:include page="footer.jsp"/>
 	</div>
 	
 </body>
