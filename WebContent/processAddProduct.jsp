@@ -27,7 +27,6 @@
 		stock = 0;
 	else
 		stock = Long.valueOf(unitsInStock);
-		//stock = Long.valueOf(unintsInStock);
 	
 	ProductRepository dao = ProductRepository.getInstance();
 	
