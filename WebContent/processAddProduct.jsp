@@ -11,7 +11,7 @@
 	String description = request.getParameter("description");
 	String manufacturer = request.getParameter("manufacturer");
 	String category = request.getParameter("category");
-	String unintsInStock = request.getParameter("unintsInStock");
+	String unitsInStock = request.getParameter("unitsInStock");
 	String condition = request.getParameter("condition");
 	
 	Integer price;
@@ -23,10 +23,10 @@
 	else
 		price = Integer.valueOf(unitPrice);
 	
-	if(unintsInStock.isEmpty())
+	if(unitsInStock.isEmpty())
 		stock = 0;
 	else
-		stock = Long.valueOf(unintsInStock);
+		stock = Long.valueOf(unitsInStock);
 		//stock = Long.valueOf(unintsInStock);
 	
 	ProductRepository dao = ProductRepository.getInstance();
@@ -42,5 +42,5 @@
 	newProduct.setCondition(condition);
 	
 	dao.addProduct(newProduct);
-	response.sendRedirect("prducts.jsp");
+	response.sendRedirect("products.jsp");
 %>
