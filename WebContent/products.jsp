@@ -8,7 +8,7 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+	href="./resources/css/bootstrap.min.css" 
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
 	crossorigin="anonymous">
 <title>상품 목록</title>
@@ -26,7 +26,6 @@
 	<%
 		ProductRepository dao = ProductRepository.getInstance();
 		ArrayList<Product> listOfProducts = dao.getAllProducts();
-		
 	%>
 	
 	<div class="container">
@@ -34,9 +33,9 @@
 			<%
 				for(int i=0; i<listOfProducts.size(); i++){
 					Product product = listOfProducts.get(i);
-				
 			%>
 				<div class="col-md-4">
+					<img src="./resources/images/<%=product.getFilename()%>" style="width:100%" > 
 					<h3><%=product.getPname()%></h3>
 					<p><%=product.getDescription() %>
 					<p><%=product.getUnitPrice()%>원
