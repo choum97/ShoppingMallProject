@@ -12,7 +12,7 @@
 	String filename = "";
 	String realFolder = "C:\\upload"; //웹 어플리케이션상의 절대 경로
 	String encType = "utf-8"; //인코딩 타입
-	int maxSize = 5*1024*1024;//최대 업로드할 파이르이 크기 5mb
+	int maxSize = 5 * 1024 * 1024;//최대 업로드할 파이르이 크기 5mb
 	
 	MultipartRequest multi = new MultipartRequest(request, realFolder,maxSize,encType,new DefaultFileRenamePolicy());
 	//new DefaultFileRenamePolicy() 중복시 파일 이름 변경해주는 것임
@@ -56,7 +56,7 @@
 	newProduct.setCategory(category);
 	newProduct.setUnitsInStock(stock);
 	newProduct.setCondition(condition);
-	newProduct.setFilename(filename);
+	newProduct.setFilename(fileName);
 	
 	dao.addProduct(newProduct);
 	response.sendRedirect("products.jsp");

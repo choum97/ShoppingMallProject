@@ -21,7 +21,6 @@
 		<div class="container">
 			<h1 class="display-3">상품목록</h1>
 		</div>
-		<hr>
 	</div>
 	<%
 		ProductRepository dao = ProductRepository.getInstance();
@@ -46,10 +45,8 @@
 			%>
 		
 		</div>
-		
 		<hr>
-		<jsp:include page="footer.jsp"/>		
 	</div>
-	
+			<jsp:include page="footer.jsp"/>
 </body>
 </html>

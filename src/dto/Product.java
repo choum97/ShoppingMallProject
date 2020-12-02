@@ -16,14 +16,6 @@ public class Product implements Serializable {
 	private long unitsInStock;
 	private String condition;
 	private String filename;
-	
-	public String getFilename() {
-		return filename;
-	}
-
-	public void setFilename(String filename) {
-		this.filename = filename;
-	}
 
 	public Product() {
 		super();
@@ -34,10 +26,11 @@ public class Product implements Serializable {
 		this.pname = pname;
 		this.unitPrice = unitPrice;
 	}
-	
+
 	public String getProductId() {
 		return productId;
 	}
+
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
@@ -98,4 +91,11 @@ public class Product implements Serializable {
 		this.condition = condition;
 	}
 
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 }
