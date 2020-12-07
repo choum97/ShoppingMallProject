@@ -9,6 +9,8 @@
 	href="./resources/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
+	
+	<script type="text/javascript" src="./resources/js/validation.js"></script>
 <title>상품 등록</title>
 </head>
 <body>
@@ -25,20 +27,20 @@
 			<div class="form-group row">
 				<label class="col-sm-2">상품 코드</label>
 				<div class="col-sm-3">
-					<input type="text" name="proudctId" class="form-control">
+					<input type="text" id="proudctId" name="proudctId" class="form-control">
 				</div>
 			</div>
 
 			<div class="form-group row">
 				<label class="col-sm-2">상품명</label>
 				<div class="col-sm-3">
-					<input type="text" name="name" class="form-control">
+					<input type="text" id="name" name="name" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">가격</label>
 				<div class="col-sm-3">
-					<input type="text" name="unitPrice" class="form-control">
+					<input type="text" id="unitPrice" name="unitPrice" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -63,7 +65,7 @@
 			<div class="form-group row">
 				<label class="col-sm-2">재고 수</label>
 				<div class="col-sm-3">
-					<input type="text" name="unitsInStock" class="form-control">
+					<input type="text" id="unitsInStock"  name="unitsInStock" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -82,7 +84,7 @@
 			</div>
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input type="submit" value="등록" class="btn btn-primary">
+					<input type="button" value="등록" class="btn btn-primary" onclick="CheckAddProduct()">
 				</div>
 			</div>
 		</form>
